@@ -1,62 +1,30 @@
-Numero;Nome;Nascimento;Sexo;CPF;Telefone
-;teneir wenginowicz;1989-05-03;Masculino;062.871.839-00;(51) 99185-2578
-1;teneir wenginowicz;56756-04-05;Masculino;062.871.839-00;(51) 9918-52578
-2;teneir wenginowicz;62426-03-04;Feminino;062.871.839-00;991852578
-003;teneir wenginowicz;5455-03-04;Masculino;062.871.839-00;(51) 99185-2578
-004;Valdelir Wenginowicz ;2025-06-05;Masculino;036.267.649-66;51980100348
-005;Valdelir Wenginowicz ;2025-06-05;Masculino;036.267.659-66;51980100348
-006;teneir wenginowicz;08/64/3;Feminino;086.543.356-89;(51) 99185-2578
-007;"teneir wenginowicz";45/45/4555;Masculino;062.871.839-01;991852578436435
-008;teneir wenginowicz;10/01/1988;Masculino;062.871.839-02;(51) 99185-2578
-009;"Felipe Gomes Gomes";17/02/2009;Masculino;684.973.289-53;"(55) 96015-7178"
-010;"Vinicius Alves Carvalho";19/07/1951;Masculino;517.694.929-45;"(30) 98589-4054"
-011;"Rafael Ferreira Rodrigues";03/02/1951;Masculino;283.338.744-77;"(73) 94846-1901"
-012;"João Oliveira Pereira";15/04/1949;Masculino;047.701.991-58;"(11) 92759-2995"
-013;"Beatriz Carvalho Santos";15/07/2000;Feminino;745.371.601-39;"(81) 99519-8612"
-98;"KITO";17/04/1970;Masculino;161.599.232-74;"(24) 91884-4397"
-015;"Valentina Almeida Souza";26/05/2000;Feminino;651.689.204-75;"(47) 93753-9239"
-016;"Matheus Alves Ribeiro";02/03/2009;Masculino;604.612.423-81;"(76) 95432-7583"
-017;"Sophia Ribeiro Rodrigues";28/12/2006;Feminino;275.397.363-22;"(97) 95459-3629"
-018;"Mariana Ferreira Martins";14/06/1966;Feminino;747.551.541-24;"(91) 91755-8455"
-019;"Enzo Ribeiro Costa";16/04/1973;Masculino;048.410.308-92;"(71) 95982-6308"
-020;"Sophia Lima Almeida";15/11/1984;Feminino;813.675.775-25;"(56) 93983-0659"
-021;"Yasmin Gomes Rodrigues";17/04/2004;Feminino;383.972.858-15;"(31) 91578-5644"
-022;"Eduardo Ribeiro Oliveira";29/12/1999;Masculino;993.709.606-35;"(73) 97940-5027"
-023;"Matheus Santos Rodrigues";17/08/1947;Masculino;045.469.835-52;"(42) 99437-6281"
-024;"Vinicius Rodrigues Ferreira";01/07/1948;Masculino;741.073.582-21;"(49) 99109-7615"
-025;"Eduardo Gomes Alves";30/06/1981;Masculino;155.390.518-49;"(16) 94696-3481"
-026;"Ana Santos Rodrigues";31/05/1993;Feminino;427.063.868-39;"(30) 93947-6711"
-027;"João Ribeiro Ferreira";14/07/1947;Masculino;086.673.261-54;"(30) 98486-6080"
-028;"Gabriela Costa Almeida";30/05/1974;Feminino;394.176.412-24;"(94) 98497-8211"
-029;"Felipe Almeida Costa";29/08/1959;Masculino;303.428.294-77;"(12) 96274-3162"
-030;"João Martins Silva";04/08/1999;Masculino;410.659.513-45;"(79) 92362-4293"
-031;"Luiza Oliveira Silva";11/09/1998;Feminino;683.256.266-78;"(13) 96442-2312"
-032;"Ana Carvalho Ribeiro";22/10/1993;Feminino;004.563.517-44;"(84) 93373-4336"
-033;"Gabriel Rodrigues Carvalho";11/11/1997;Masculino;003.154.937-56;"(82) 96689-8515"
-034;"Julia Alves Ferreira";18/09/1996;Feminino;247.943.435-80;"(99) 90757-9887"
-035;"Enzo Souza Alves";14/12/1980;Masculino;758.297.338-10;"(60) 95032-5930"
-036;"Matheus Rodrigues Carvalho";30/01/1968;Masculino;062.668.889-99;"(32) 90284-9024"
-037;"Alice Lima Santos";24/05/1958;Feminino;886.922.325-05;"(50) 95082-1771"
-038;"Yasmin Martins Santos";19/10/1976;Feminino;828.839.161-17;"(98) 96448-7405"
-039;"Enzo Martins Carvalho";18/12/1948;Masculino;276.736.740-87;"(40) 90478-0399"
-040;"Ana Carvalho Ferreira";27/11/1948;Feminino;325.139.730-79;"(16) 98893-0169"
-041;"Laura Souza Gomes";25/07/1948;Feminino;269.869.288-76;"(47) 91584-1660"
-042;"Gabriela Lima Ribeiro";14/08/1964;Feminino;443.470.256-72;"(68) 97289-2264"
-043;"Helena Almeida Gomes";17/05/1952;Feminino;617.798.937-65;"(15) 99001-9403"
-044;"Helena Pereira Costa";13/08/1987;Feminino;105.800.360-95;"(27) 92443-1935"
-045;"Pedro Rodrigues Lima";19/05/1999;Masculino;238.129.124-01;"(74) 93039-7783"
-046;"Bruno Ribeiro Ribeiro";27/11/1973;Masculino;835.066.522-77;"(84) 99384-7302"
-047;"Helena Alves Silva";19/04/2008;Feminino;575.291.762-45;"(79) 96808-9964"
-048;"Pedro Martins Costa";10/04/2004;Masculino;495.357.651-20;"(94) 90200-8867"
-049;"Valentina Martins Ribeiro";24/02/2001;Feminino;617.102.419-74;"(54) 98945-9153"
-050;"Eduardo Ferreira Almeida";13/05/2006;Masculino;607.598.072-22;"(70) 93400-5745"
-051;"Valentina Ferreira Alves";02/07/1996;Feminino;371.042.085-07;"(67) 98678-7369"
-052;"Luiza Alves Ribeiro";01/04/1982;Feminino;413.665.562-72;"(67) 93559-6385"
-053;"Valentina Souza Alves";29/05/1974;Feminino;201.830.899-97;"(62) 91013-5594"
-054;"Bruno Ferreira Martins";28/03/1988;Masculino;687.477.001-99;"(71) 95308-6228"
-055;"Manuela Oliveira Martins";29/09/1993;Feminino;345.274.486-82;"(48) 97505-5368"
-056;"Yasmin Oliveira Alves";09/04/1949;Feminino;388.572.483-23;"(85) 93708-6510"
-057;"Lucas Carvalho Ribeiro";02/07/1966;Masculino;998.818.679-87;"(64) 92180-0525"
-058;"Vinicius Alves Rodrigues";07/12/1993;Masculino;921.982.995-78;"(69) 97866-4254"
-099;Teste;06/07/1990;Feminino;086.543.356-88;991852578
-100;Outro teste;04/06/2000;Masculino;062.871.839-04;(51) 99185-2578
+id_rfid,nome,sexo,categoria,equipe
+168,João Silva,M,35-40M,Team Runner
+174,Maria Souza,F,25-30F,Speed Girls
+170,Mary Silva,F,15-20F,Speed Girls
+163,Mari Santos,F,15-20F,Speed Girls
+165,Marta Suza,F,25-30F,Speed Girls
+162,Jo Souza,M,35-40M,Team Runner
+177,Jão Silva,M,25-30M,Team Runner
+164,Jango Santos,M,25-30M,Team Runner
+166,João Sousa,M,35-40M,Team Runner
+169,João Santos,M,25-30M,Team Runner
+151,John Silva,M,25-30M,Team Team
+587,santos Silva,M,25-30M,Team Team
+987,Jo Santos,M,25-30M,Team Team
+1cf,teste 10,M,25-30M,Team Team
+1ef,teste 09,M,25-30M,Team Team
+64f,teste 01,M,25-30M,Team Team
+65f,teste 03,M,25-30M,Team Team
+1df,teste 02,M,25-30M,Team Team
+1ff,teste 04,M,25-30M,Team Team
+60f,teste 05,M,25-30M,Team Team
+63f,teste 06,M,25-30M,Team Team
+61f,teste 07,M,25-30M,Team Team
+62f,teste 08,M,25-30M,Team Team
+
+
+
+
+
+

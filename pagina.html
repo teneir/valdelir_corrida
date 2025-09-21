@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Resultados - Team Valdelir Wenginowicz</title>
+    <style>
+        /* Importando uma fonte profissional e moderna */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        :root {
+            --cor-fundo-escuro: #121828; /* Um azul/preto bem escuro */
+            --cor-fundo-painel: #1a2238; /* Um pouco mais claro para os painéis */
+            --cor-borda: #2a3858;
+            --cor-texto-principal: #f0f0f5;
+            --cor-texto-secundario: #a9b3d1;
+            --cor-acento-principal: #3498db; /* Azul vibrante */
+            --cor-acento-secundario: #4a5a8a;
+            --sombra-painel: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cor-fundo-escuro);
+            color: var(--cor-texto-principal);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* --- Cabeçalho Melhorado --- */
+        .header {
+            background: linear-gradient(90deg, var(--cor-fundo-painel), var(--cor-fundo-escuro));
+            padding: 20px 30px;
+            border-radius: 12px;
+            border: 1px solid var(--cor-borda);
+            box-shadow: var(--sombra-painel);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .team-title {
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--cor-texto-principal);
+            text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+        }
+        
+        .live-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1em;
+            color: var(--cor-acento-principal);
+            font-weight: 600;
+        }
+
+        .live-status::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: #2ecc71; /* Verde para "ao vivo" */
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(46, 204, 113, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+        }
+        
+        /* --- Controles e Busca --- */
+        .controls-container {
+            background: var(--cor-fundo-painel);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--cor-borda);
+            display: flex;
+            justify-content: flex-end; /* Alinha a busca à direita */
+            margin-bottom: 20px;
+        }
+
+        .search-group input {
+            background-color: var(--cor-fundo-escuro);
+            border: 1px solid var(--cor-borda);
+            color: var(--cor-texto-principal);
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 1em;
+            width: 300px; /* Largura da barra de busca */
+            transition: all 0.3s ease;
+        }
+        
+        .search-group input:focus {
+            outline: none;
+            border-color: var(--cor-acento-principal);
+            box-shadow: 0 0 15px rgba(52, 152, 219, 0.2);
+        }
+
+        /* --- Tabela de Resultados --- */
+        .table-container {
+            background-color: var(--cor-fundo-painel);
+            border-radius: 10px;
+            padding: 10px;
+            border: 1px solid var(--cor-borda);
+            box-shadow: var(--sombra-painel);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        thead tr {
+            border-bottom: 2px solid var(--cor-acento-principal);
+        }
+
+        th {
+            color: var(--cor-texto-secundario);
+            font-weight: 600;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--cor-borda);
+            transition: background-color 0.2s ease;
+        }
+        
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background-color: var(--cor-acento-secundario);
+        }
+
+        /* Destaque para as primeiras posições */
+        tbody tr:nth-child(1) td:first-child { font-weight: 700; color: #ffd700; } /* Ouro */
+        tbody tr:nth-child(2) td:first-child { font-weight: 700; color: #c0c0c0; } /* Prata */
+        tbody tr:nth-child(3) td:first-child { font-weight: 700; color: #cd7f32; } /* Bronze */
+        
+        td:nth-child(1), td:nth-child(2), td:nth-child(4) { text-align: center; } /* Pos, Num, Vts */
+        td:nth-child(3) { font-weight: 600; } /* Nome */
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1 class="team-title">Team Valdelir Wenginowicz</h1>
+            <div class="live-status">Resultados ao Vivo</div>
+        </header>
+
+        <main>
+            <div class="controls-container">
+                <div class="search-group">
+                    <input type="search" id="busca" placeholder="Buscar por nome ou número...">
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Num</th>
+                            <th>Nome</th>
+                            <th>Voltas</th>
+                            <th>Tempo Total</th>
+                            <th>Diferença</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const tableBody = document.getElementById('table-body');
+        const buscaInput = document.getElementById('busca');
+        const CSV_FILE_URL = 'etiquetas_passagens.csv'; // O NOME DO SEU ARQUIVO CSV
+
+        // Função para formatar segundos em HH:MM:SS
+        function formatarDuracao(segundosTotais) {
+            if (segundosTotais === null || segundosTotais < 0 || !isFinite(segundosTotais)) {
+                return "-";
+            }
+            const horas = Math.floor(segundosTotais / 3600);
+            const minutos = Math.floor((segundosTotais % 3600) / 60);
+            const segundos = Math.floor(segundosTotais % 60);
+            return `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+        }
+        
+        async function fetchAndProcessData() {
+            try {
+                // 1. Busca o arquivo CSV no servidor
+                const response = await fetch(CSV_FILE_URL + '?t=' + new Date().getTime()); // Evita cache
+                if (!response.ok) { throw new Error('Arquivo CSV não encontrado.'); }
+                const csvText = await response.text();
+
+                // 2. Processa os dados do CSV
+                const linhas = csvText.trim().split('\n').slice(1);
+                
+                const atletas = {};
+                linhas.forEach(linhaStr => {
+                    if (!linhaStr) return;
+                    const [etiqueta, nome, timestampStr] = linhaStr.split(',');
+                    if (!etiqueta || !timestampStr) return;
+                    const timestamp = new Date(timestampStr.trim().replace(' ', 'T'));
+                    if (isNaN(timestamp.getTime())) return;
+
+                    if (!atletas[etiqueta]) {
+                        atletas[etiqueta] = { nome: nome.trim(), num: etiqueta.trim(), passagens: [] };
+                    }
+                    atletas[etiqueta].passagens.push(timestamp);
+                });
+                
+                let resultadosProcessados = [];
+                for (const atletaId in atletas) {
+                    const dados = atletas[atletaId];
+                    const passagensOrdenadas = dados.passagens.sort((a, b) => a - b);
+                    if (passagensOrdenadas.length < 2) continue;
+                    
+                    const voltas = passagensOrdenadas.length - 1;
+                    const tempoTotalMs = passagensOrdenadas[passagensOrdenadas.length - 1] - passagensOrdenadas[0];
+
+                    resultadosProcessados.push({
+                        num: dados.num, nome: dados.nome, vts: voltas, tempo_total_s: tempoTotalMs / 1000,
+                    });
+                }
+
+                if (resultadosProcessados.length === 0) {
+                     tableBody.innerHTML = `<tr><td colspan="6" style="text-align:center;">Aguardando dados de voltas...</td></tr>`;
+                     return;
+                }
+                
+                // 3. Ordena os resultados
+                resultadosProcessados.sort((a, b) => {
+                    if (b.vts !== a.vts) return b.vts - a.vts;
+                    return a.tempo_total_s - b.tempo_total_s;
+                });
+                
+                // 4. Calcula Posição e Diferença e exibe na tabela
+                const lider = resultadosProcessados[0];
+                tableBody.innerHTML = ''; 
+
+                resultadosProcessados.forEach((atleta, index) => {
+                    const posicao = index + 1;
+                    const diff_s = atleta.vts === lider.vts ? atleta.tempo_total_s - lider.tempo_total_s : -1;
+                    
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${posicao}</td>
+                        <td>${atleta.num}</td>
+                        <td>${atleta.nome}</td>
+                        <td>${atleta.vts}</td>
+                        <td>${formatarDuracao(atleta.tempo_total_s)}</td>
+                        <td>${diff_s > 0 ? '+' + formatarDuracao(diff_s) : '-'}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+
+            } catch (error) {
+                console.error('Erro:', error);
+                tableBody.innerHTML = `<tr><td colspan="6" style="text-align:center; color: #ff6b6b;">Erro: ${error.message} Verifique se o arquivo CSV está na pasta correta.</td></tr>`;
+            }
+        }
+        
+        // Funcionalidade de busca (opera na tabela já renderizada)
+        buscaInput.addEventListener('keyup', () => {
+             const termoBusca = buscaInput.value.toUpperCase();
+             const linhas = tableBody.getElementsByTagName('tr');
+             for (const linha of linhas) {
+                 const celulaNum = linha.cells[1].textContent.toUpperCase();
+                 const celulaNome = linha.cells[2].textContent.toUpperCase();
+                 if (celulaNome.includes(termoBusca) || celulaNum.includes(termoBusca)) {
+                     linha.style.display = "";
+                 } else {
+                     linha.style.display = "none";
+                 }
+             }
+        });
+
+        // Loop de atualização automática
+        setInterval(fetchAndProcessData, 5000); // Atualiza a cada 5 segundos
+        // Carga inicial
+        fetchAndProcessData();
+    </script>
+</body>
+</html>
